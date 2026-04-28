@@ -1,24 +1,29 @@
-# 🚀 NEPSE API Pro - The Ultimate Unofficial Nepal Stock Exchange API
+# 🚀 NEPSE API Pro — The Ultimate Nepal Stock Exchange API by Diwas Khatri
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/render?type=waving&color=gradient&height=200&section=header&text=NEPSE%20API%20PRO&fontSize=80&animation=fadeIn&fontAlignY=35" width="100%" />
+</p>
 
 [![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com)
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org)
 [![PyPI](https://img.shields.io/pypi/v/api-nepse?style=for-the-badge)](https://pypi.org/project/api-nepse/)
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
-[![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/gunpark_xd)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/BalochLeader)
 
-**NEPSE API Pro** is a high-performance, ultra-comprehensive unofficial API for the **Nepal Stock Exchange (NEPSE)**. Designed for developers, traders, and financial analysts, it provides seamless access to real-time market data, historical records, and deep market insights.
+**NEPSE API Pro** is the most advanced, high-performance, and comprehensive unofficial API for the **Nepal Stock Exchange (NEPSE)**. Developed by **Diwas Khatri**, this tool is designed for developers, financial analysts, and algorithmic traders who need reliable, real-time access to the Nepal stock market.
 
 ---
 
-## 🔥 Key Features
+## 🔥 Why Choose NEPSE API Pro?
 
-- ⚡ **Real-time Data**: Live stock prices, LTP, and market status.
-- 📊 **Full Market Coverage**: Today's Price, Indices, Sub-Indices, and Floorsheet.
-- 🏢 **Company Insights**: Complete lists of companies, securities, and detailed market depth.
-- 🔝 **Performance Tracking**: Top Gainers, Losers, Turnover, Volume, and Transactions.
-- 🛠️ **Developer First**: Standardized JSON responses, Swagger UI documentation, and easy integration.
-- 🛡️ **Advanced Scraping**: Handles complex NEPSE authentication and WASM-based token parsing automatically.
-- 🔄 **Multiple Headers**: Rotates User-Agents to prevent blocking.
+This is not just another scraper. It is a production-ready API that handles the complexities of the NEPSE website automatically.
+
+- ⚡ **Real-time Market Data**: Get live stock prices, LTP, and market status instantly.
+- 📊 **Comprehensive Coverage**: Access Today's Price, Indices, Sub-Indices, and Floorsheet data.
+- 🏢 **Deep Insights**: Detailed market depth, company profiles, and security lists.
+- 🔝 **Performance Tracking**: Real-time Top Gainers, Losers, Turnover, Volume, and Transactions.
+- 🛡️ **Advanced Security**: Automatically handles NEPSE's complex authentication and WASM-based token parsing.
+- 🔄 **Anti-Blocking**: Built-in User-Agent rotation and optimized request handling.
 
 ---
 
@@ -26,100 +31,81 @@
 
 ### 1. Installation
 
-Install `api-nepse` directly from PyPI:
+Install the official `api-nepse` package from PyPI:
 
 ```bash
 pip install api-nepse
 ```
 
-### 2. Run the API Server
+### 2. Launch the API Server
 
-After installation, you can run the API server using the `api-nepse` command:
+Run the server with a single command:
 
 ```bash
 api-nepse
 ```
 
-The API will be live at `http://localhost:8080`.
+Your API will be live at `http://localhost:8080`. View the interactive documentation at `http://localhost:8080/docs`.
 
 ---
 
-## 💻 Code Examples
+## 💻 Developer Integration
 
 ### Python Example
 ```python
 import requests
 
-# Get Today's Price
+# Fetch Today's Price from NEPSE
 response = requests.get("http://localhost:8080/api/v1/market/today-price")
 data = response.json()
 
 if data["status"] == "success":
-    for record in data["data"]:
-        print(f"{record['symbol']}: {record['lastTradedPrice']}")
+    for stock in data["data"]:
+        print(f"{stock['symbol']}: Rs. {stock['lastTradedPrice']}")
 ```
 
 ### JavaScript (Fetch) Example
 ```javascript
+// Get Live Market Status
 fetch('http://localhost:8080/api/v1/market/live')
-  .then(response => response.json())
-  .then(data => console.log(data.data))
-  .catch(error => console.error('Error:', error));
+  .then(res => res.json())
+  .then(json => console.log("Live Data:", json.data))
+  .catch(err => console.error("API Error:", err));
 ```
 
 ---
 
-## 🌐 How to Host
-
-### 1. Local Hosting
-Simply run `api-nepse` on your local machine. Ensure port 8080 is open.
-
-### 2. Cloud Hosting (Heroku / Render / Railway)
-1. Fork this repository.
-2. Connect your GitHub to the hosting platform.
-3. Set the start command to:
-   ```bash
-   uvicorn api_nepse.main:app --host 0.0.0.0 --port $PORT
-   ```
-
-### 3. Docker Hosting
-Use the following `Dockerfile`:
-```dockerfile
-FROM python:3.9
-RUN pip install api-nepse
-EXPOSE 8080
-CMD ["api-nepse"]
-```
-
----
-
-## 📖 API Endpoints
-
-👉 **[http://localhost:8080/docs](http://localhost:8080/docs)**
+## 📖 Key API Endpoints
 
 | Category | Endpoint | Description |
 | :--- | :--- | :--- |
-| **Market** | `GET /api/v1/market/status` | Check if market is OPEN/CLOSED |
-| **Market** | `GET /api/v1/market/today-price` | Full Today's Price sheet |
-| **Market** | `GET /api/v1/market/live` | Real-time live stock prices |
-| **Indices** | `GET /api/v1/indices` | All NEPSE Indices |
+| **Market** | `GET /api/v1/market/status` | Real-time Market Open/Closed status |
+| **Market** | `GET /api/v1/market/today-price` | Complete Today's Price list |
+| **Market** | `GET /api/v1/market/live` | Live stock prices during trading hours |
+| **Indices** | `GET /api/v1/indices` | All NEPSE and Sub-Indices |
 | **Performers** | `GET /api/v1/top/gainers` | Top 10 Gaining stocks |
-| **Advanced** | `GET /api/v1/market/floorsheet` | Latest Floorsheet data |
+| **Advanced** | `GET /api/v1/market/floorsheet` | Real-time Floorsheet transactions |
 
 ---
 
-## 👨‍💻 Developer
+## 👨‍💻 About the Developer
 
-**Gunpark**
-- 📸 Instagram: [@gunpark_xd](https://instagram.com/gunpark_xd)
-- 💻 GitHub: [BalochLeader](https://github.com/BalochLeader)
+**Diwas Khatri** is a passionate developer specializing in automation, financial tools, and API development. 
+
+- 🌍 **GitHub**: [BalochLeader](https://github.com/BalochLeader)
+- 📢 **Telegram**: [@BalochLeader](https://t.me/BalochLeader)
+- 📧 **Contact**: Reach out for custom API solutions or collaborations.
 
 ---
 
-## 📜 License
+## 📜 License & Disclaimer
 
 This project is licensed under the **MIT License**.
 
-## ⚠️ Disclaimer
+**Disclaimer**: This is an **unofficial** API. It is intended for educational and informational purposes only. It is not affiliated with or endorsed by the Nepal Stock Exchange (NEPSE). Use responsibly.
 
-This is an **unofficial** API. Use for informational purposes only. Not affiliated with NEPSE.
+---
+
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=BalochLeader-NEPSE-API&color=blueviolet&style=flat-square&label=REPO+VIEWS" alt="NEPSE API Views" />
+</p>
