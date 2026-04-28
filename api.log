@@ -84,3 +84,17 @@ INFO:     127.0.0.1:56176 - "POST / HTTP/1.1" 405 Method Not Allowed
 INFO:     127.0.0.1:56180 - "POST / HTTP/1.1" 405 Method Not Allowed
 INFO:     127.0.0.1:54854 - "POST / HTTP/1.1" 405 Method Not Allowed
 INFO:     127.0.0.1:49864 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:49872 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:49888 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:47240 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:59318 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:47354 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:41432 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:50332 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:39118 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:41652 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:41668 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:57218 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:46024 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:34582 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:34584 - "POST / HTTP/1.1" 405 Method Not Allowed
