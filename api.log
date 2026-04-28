@@ -1,0 +1,86 @@
+nohup: ignoring input
+INFO:     Started server process [3324]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51220 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:52912 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52918 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:59488 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:59484 - "GET /api/v1/top-gainers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59500 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:59508 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:59510 - "GET /api/v1/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59522 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:47382 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:47368 - "GET /api/v1/statistics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47396 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:47410 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:59480 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59488 - "GET /api/v1/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59490 - "GET /api/v1/market-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59506 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:59494 - "GET /api/v1/indices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59510 - "GET /api/v1/sub-indices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59524 - "GET /api/v1/top-gainers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59540 - "GET /api/v1/top-losers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59548 - "GET /api/v1/top-traded HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59556 - "GET /api/v1/top-turnover HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59560 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:59558 - "GET /api/v1/top-transactions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59564 - "GET /api/v1/live-market HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59572 - "GET /api/v1/price-volume HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59588 - "GET /api/v1/companies HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59600 - "GET /api/v1/securities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59604 - "GET /api/v1/supply-demand HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59618 - "GET /api/v1/statistics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59626 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59634 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59648 - "GET /api/v1/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59664 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:59658 - "GET /api/v1/market-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59680 - "GET /api/v1/indices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59692 - "GET /api/v1/sub-indices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56670 - "GET /api/v1/top-gainers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56684 - "GET /api/v1/top-losers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56690 - "GET /api/v1/top-traded HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56692 - "GET /api/v1/top-turnover HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56696 - "GET /api/v1/top-transactions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56704 - "GET /api/v1/live-market HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56730 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56714 - "GET /api/v1/price-volume HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56740 - "GET /api/v1/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56756 - "GET /api/v1/companies HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56758 - "GET /api/v1/market-status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56770 - "GET /api/v1/securities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56796 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:56784 - "GET /api/v1/indices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56788 - "GET /api/v1/supply-demand HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56800 - "GET /api/v1/sub-indices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56810 - "GET /api/v1/top-gainers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56812 - "GET /api/v1/top-losers HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56808 - "GET /api/v1/statistics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56838 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56824 - "GET /api/v1/top-traded HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56840 - "GET /api/v1/top-turnover HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56852 - "GET /api/v1/top-transactions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56854 - "GET /api/v1/live-market HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56868 - "GET /api/v1/price-volume HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56870 - "GET /api/v1/companies HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56876 - "GET /api/v1/securities HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56882 - "GET /api/v1/supply-demand HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56890 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:56884 - "GET /api/v1/statistics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56900 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56272 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:56278 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:55360 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:55376 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:37572 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:56836 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:56846 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:56162 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:56176 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:56180 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:54854 - "POST / HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:49864 - "POST / HTTP/1.1" 405 Method Not Allowed
