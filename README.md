@@ -18,6 +18,7 @@
 - 🔝 **Performance Tracking**: Top Gainers, Losers, Turnover, Volume, and Transactions.
 - 🛠️ **Developer First**: Standardized JSON responses, Swagger UI documentation, and easy integration.
 - 🛡️ **Advanced Scraping**: Handles complex NEPSE authentication and WASM-based token parsing automatically.
+- 🔄 **Multiple Headers**: Rotates User-Agents to prevent blocking.
 
 ---
 
@@ -41,47 +42,69 @@ api-nepse
 
 The API will be live at `http://localhost:8080`.
 
-### 3. Access API Documentation
+---
 
-Once the server is running, visit the interactive documentation (Swagger UI) at:
-👉 **[http://localhost:8080/docs](http://localhost:8080/docs)**
+## 💻 Code Examples
+
+### Python Example
+```python
+import requests
+
+# Get Today's Price
+response = requests.get("http://localhost:8080/api/v1/market/today-price")
+data = response.json()
+
+if data["status"] == "success":
+    for record in data["data"]:
+        print(f"{record['symbol']}: {record['lastTradedPrice']}")
+```
+
+### JavaScript (Fetch) Example
+```javascript
+fetch('http://localhost:8080/api/v1/market/live')
+  .then(response => response.json())
+  .then(data => console.log(data.data))
+  .catch(error => console.error('Error:', error));
+```
+
+---
+
+## 🌐 How to Host
+
+### 1. Local Hosting
+Simply run `api-nepse` on your local machine. Ensure port 8080 is open.
+
+### 2. Cloud Hosting (Heroku / Render / Railway)
+1. Fork this repository.
+2. Connect your GitHub to the hosting platform.
+3. Set the start command to:
+   ```bash
+   uvicorn api_nepse.main:app --host 0.0.0.0 --port $PORT
+   ```
+
+### 3. Docker Hosting
+Use the following `Dockerfile`:
+```dockerfile
+FROM python:3.9
+RUN pip install api-nepse
+EXPOSE 8080
+CMD ["api-nepse"]
+```
 
 ---
 
 ## 📖 API Endpoints
 
-All endpoints return data in a standardized JSON format, including a `status`, `timestamp`, `endpoint`, `developer` information, and the `data` payload.
+👉 **[http://localhost:8080/docs](http://localhost:8080/docs)**
 
 | Category | Endpoint | Description |
 | :--- | :--- | :--- |
-| **General** | `GET /` | Welcome message and API overview. |
-| **System** | `GET /health` | Health check for the API server. |
 | **Market** | `GET /api/v1/market/status` | Check if market is OPEN/CLOSED |
-| **Market** | `GET /api/v1/market/summary` | Overall market summary. |
-| **Market** | `GET /api/v1/market/today-price` | Full Today's Price sheet. |
-| **Indices** | `GET /api/v1/indices` | All NEPSE Indices. |
-| **Indices** | `GET /api/v1/sub-indices` | Sector-wise sub-indices. |
-| **Performers** | `GET /api/v1/top/gainers` | Top 10 Gaining stocks. |
-| **Performers** | `GET /api/v1/top/losers` | Top 10 Losing stocks. |
-| **Performers** | `GET /api/v1/top/turnover` | Stocks with highest turnover. |
-| **Performers** | `GET /api/v1/top/volume` | Stocks with highest traded volume. |
-| **Performers** | `GET /api/v1/top/transactions` | Stocks with highest transaction count. |
-| **Company** | `GET /api/v1/companies` | Complete list of listed companies. |
-| **Company** | `GET /api/v1/securities` | Complete list of all securities. |
-| **Live Market** | `GET /api/v1/market/live` | Real-time live market prices for all active stocks. |
-| **Live Market** | `GET /api/v1/market/depth/{symbol}` | Real-time Order Book (Market Depth) for a specific symbol. |
-| **Advanced Data** | `GET /api/v1/market/supply-demand` | Market-wide Supply and Demand statistics. |
-| **Advanced Data** | `GET /api/v1/market/floorsheet` | Latest Floorsheet data (Recent Transactions). |
-
----
-
-## 🛠️ Technical Architecture
-
-This API is built using **FastAPI** for its asynchronous capabilities and speed. It leverages a custom scraping engine that:
-1.  **Authenticates** with NEPSE's servers.
-2.  **Parses** dynamic salts using a **WebAssembly (WASM)** module (`css.wasm`).
-3.  **Generates** valid tokens to access protected data endpoints.
-4.  **Formats** raw data into clean, developer-friendly JSON.
+| **Market** | `GET /api/v1/market/today-price` | Full Today's Price sheet |
+| **Market** | `GET /api/v1/market/live` | Real-time live stock prices |
+| **Indices** | `GET /api/v1/indices` | All NEPSE Indices |
+| **Performers** | `GET /api/v1/top/gainers` | Top 10 Gaining stocks |
+| **Advanced** | `GET /api/v1/market/floorsheet` | Latest Floorsheet data |
 
 ---
 
@@ -95,14 +118,8 @@ This API is built using **FastAPI** for its asynchronous capabilities and speed.
 
 ## 📜 License
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**.
 
 ## ⚠️ Disclaimer
 
-This is an **unofficial** API. It is not affiliated with, maintained by, or endorsed by the Nepal Stock Exchange (NEPSE). Use this data for informational and educational purposes only. For critical financial decisions, always refer to official NEPSE sources.
-
----
-
-## 🏷️ SEO & Tags
-
-`NEPSE API` `Nepal Stock Exchange` `Nepal Share Market` `Live Stock Prices Nepal` `NEPSE Scraper` `Nepal Finance API` `Python NEPSE` `FastAPI` `Real-time Market Data` `Nepal Investors` `ShareSansar Alternative` `NEPSE Today Price API` `NEPSE Floorsheet API` `api-nepse` `pypi` `python-package`
+This is an **unofficial** API. Use for informational purposes only. Not affiliated with NEPSE.

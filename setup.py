@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="api-nepse",
-    version="2.1.0",
+    version="2.2.0",
     author="Gunpark",
     author_email="gunpark@example.com",
     description="The Ultimate Unofficial NEPSE API for real-time Nepal Stock Exchange data.",
